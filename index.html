@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Stave</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>NBA Stave: Kdo ima prav?</h1>
+    </header>
+    <main>
+        <section id="player-setup">
+            <h2>Dodaj igralce</h2>
+            <div class="input-group">
+                <label for="player-name">Ime igralca:</label>
+                <input type="text" id="player-name" placeholder="Vnesi ime igralca">
+            </div>
+            <button class="btn" onclick="addPlayer()">Dodaj igralca</button>
+            <ul id="player-list"></ul>
+        </section>
+
+        <section id="game-setup">
+            <h2>Izberi ekipi in stave</h2>
+            <div class="input-group">
+                <label for="team1">Ekipa 1:</label>
+                <select id="team1"></select>
+            </div>
+            <div class="input-group">
+                <label for="team2">Ekipa 2:</label>
+                <select id="team2"></select>
+            </div>
+            <div class="input-group">
+                <label for="player">Izberi igralca in ekipo:</label>
+                <div id="player-choices"></div>
+            </div>
+            <button class="btn" onclick="addMatch()">Dodaj tekmo</button>
+        </section>
+
+        <section id="matches">
+            <h2>Seznam tekem</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tekma</th>
+                        <th>Stave</th>
+                        <th>Zmagovalec</th>
+                        <th>Rezultat</th>
+                    </tr>
+                </thead>
+                <tbody id="match-list"></tbody>
+            </table>
+        </section>
+
+        <section id="result">
+            <h2>Rezultati</h2>
+            <button class="btn" onclick="calculateResult()">Poglej, kdo je imel prav!</button>
+            <p id="result-output"></p>
+        </section>
+    </main>
+    <footer>
+        <p>NBA Stave © 2024</p>
+    </footer>
+    <script src="game.js"></script>
+</body>
+</html>
